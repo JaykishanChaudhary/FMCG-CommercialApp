@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "da1248d3-c60e-4f91-8b83-3533491c2146",
+		"name": "FMCG-CommercialApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19171763"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": \"64bc0e34a957f18abef64e53\",\r\n    \"password\":\"123452\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateProduct",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.MTIzNDUy.sl-8ZCRy4tDaZGvFUznPE__nbRYyKmtkPUYzvVTpPd8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Curd\",\r\n    \"category\":\"food\",\r\n    \"brand\":\"Mother Dairy\",\r\n    \"price\":75,\r\n    \"quantity\":2000,\r\n    \"manufacturingDate\":\"2022-05-22\",\r\n    \"expiryDate\":\"2022-05-23\",\r\n    \"isAvailable\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/CreateProduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"CreateProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateNewUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Jaykishan Chaudhary\",\r\n    \"email\":\"JayKrishna@gmail.com\",\r\n    \"password\":\"11111\",\r\n    \"age\":29,\r\n    \"role\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/CreateUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"CreateUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProducts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.MTIzNDUy.sl-8ZCRy4tDaZGvFUznPE__nbRYyKmtkPUYzvVTpPd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.MTIzNDUy.sl-8ZCRy4tDaZGvFUznPE__nbRYyKmtkPUYzvVTpPd8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/getProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProduct",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.MTIzNDUy.sl-8ZCRy4tDaZGvFUznPE__nbRYyKmtkPUYzvVTpPd8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Flavoured Curd\",\r\n    \"category\":\"food\",\r\n    \"brand\":\"Mother Dairy\",\r\n    \"price\":180,\r\n    \"quantity\":4000,\r\n    \"manufacturingDate\":\"2022-06-21\",\r\n    \"expiryDate\":\"2022-06-23\",\r\n    \"isAvailable\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/UpdateProduct/64bc416fa4dd7526418802b7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"UpdateProduct",
+						"64bc416fa4dd7526418802b7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteProducts",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.MTIzNDUy.sl-8ZCRy4tDaZGvFUznPE__nbRYyKmtkPUYzvVTpPd8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/DeleteProduct/64bc2f0492a3e07d6f0e5b66",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"DeleteProduct",
+						"64bc2f0492a3e07d6f0e5b66"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetListOfUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.MTIzNDUy.sl-8ZCRy4tDaZGvFUznPE__nbRYyKmtkPUYzvVTpPd8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/getUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductByCategory",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "API DOC",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Sample Visualizer code\r",
+							"pm.visualizer.set({\r",
+							"    title: 'HTML Response Visualization',\r",
+							"    script: function (postman, response) {\r",
+							"        // Assuming the response is in HTML format, directly return the response body\r",
+							"        return response.text();\r",
+							"    }\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api-docs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api-docs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
