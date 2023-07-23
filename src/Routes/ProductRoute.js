@@ -6,6 +6,7 @@ const jwtAuth=require('../MiddleWare/AuthMiddleware');
 
 router.post('/CreateProduct',jwtAuth,Product.CreateProduct);
 router.get('/getProducts',jwtAuth,Product.GetProduct);
+router.get('/ProductsByCategory',jwtAuth,Product.GetProductByCategory);
 router.put('/UpdateProduct/:_id',jwtAuth,Product.UpdateProduct);
 router.delete('/DeleteProduct/:_id',jwtAuth,Product.DeleteProduct);
 

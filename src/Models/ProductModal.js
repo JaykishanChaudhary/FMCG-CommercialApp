@@ -25,11 +25,11 @@ const fmcgProductSchema = new mongoose.Schema({
     min: 0,
   },
   manufacturingDate: {
-    type: Date,
+    type: String,
     required: true,
   },
   expiryDate: {
-    type: Date,
+    type: String,
     required: true,
   },
   isAvailable: {
